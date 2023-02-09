@@ -11,25 +11,11 @@
   ],
   "routes": [
     {
-      "headers": [
-        {
-          "source": "/.*",
-          "headers": [
-            {
-              "key": "Access-Control-Allow-Origin",
-              "value": "*"
-            },
-            {
-              "key": "Access-Control-Allow-Headers",
-              "value": "X-Requested-With, Access-Control-Allow-Origin, X-HTTP-Method-Override, Content-Type, Authorization, Accept"
-            },
-            {
-              "key": "Access-Control-Allow-Credentials",
-              "value": "true"
-            }
-          ]
-        }
-      ],
+        "headers": {
+            "Access-Control-Allow-Origin": "*",
+            "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE, OPTIONS",
+            "Access-Control-Allow-Headers": "X-Requested-With, Content-Type, Accept"
+        },
       "src": "/(.*)",
       "dest": "server.js"
     }
