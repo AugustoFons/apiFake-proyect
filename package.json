@@ -14,9 +14,9 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "dev": "node server.js",
-    "start": "node server.js",
-    "watch": "json-server productos.json --port=5000"
+    "dev": "NODE_ENV=development node server.js",
+    "start": "NODE_ENV=production node server.js",
+    "watch": "json-server productos.json --port=8000"
   },
   "eslintConfig": {
     "extends": [
