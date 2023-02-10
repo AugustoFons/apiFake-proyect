@@ -6,9 +6,7 @@ const data = require('./productos.json')
 const isProductionEnv = process.env.NODE_ENV === 'production';
 
 // For mocking the POST request, POST request won't make any changes to the DB in production environment
-const router = jsonServer.router(isProductionEnv ? 'productos.json' : 'productos.json', {
-    _isFake: isProductionEnv
-})
+const router = jsonServer.router('productos.json')
 const middlewares = jsonServer.defaults()
 
 server.use(middlewares)
