@@ -38,11 +38,6 @@ server.use(jsonServer.rewriter({
     '/api/*': '/$1',
     '/blog/:resource/:id/show': '/:resource/:id'
 }))
-server.use((req, res, next) => {
-    if (req.path !== '/')
-        router.db.setState('./productos.json')
-    next()
-})
 server.use(router)
 server.listen(5000, () => {
     console.log('JSON Server is running')

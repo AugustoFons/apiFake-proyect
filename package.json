@@ -16,7 +16,7 @@
   "scripts": {
     "dev": "node server.js",
     "start": "node server.js",
-    "watch": "json-server productos.json --port=8000"
+    "watch": "json-server productos.json --port=5000"
   },
   "eslintConfig": {
     "extends": [
